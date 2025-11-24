@@ -32,7 +32,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import node.type.services.INodeType;
-import python.to.java.services.IKMeans;
+import kmeans.services.KMeansService;
 import reputation.node.enums.NodeServiceType;
 import reputation.node.mqtt.ListenerDevices;
 import reputation.node.reputation.IReputation;
@@ -60,7 +60,7 @@ public class Node implements NodeTypeService, ILedgerSubscriber {
 
   private MQTTClient MQTTClient;
   private INodeType nodeType;
-  private IKMeans kMeans;
+  private KMeansService kMeans;
   private int checkDeviceTaskTime;
   private int requestDataTaskTime;
   private int waitDeviceResponseTaskTime;
@@ -1238,11 +1238,11 @@ public class Node implements NodeTypeService, ILedgerSubscriber {
     this.nodeType = nodeType;
   }
 
-  public IKMeans getkMeans() {
+  public KMeansService getkMeans() {
     return kMeans;
   }
 
-  public void setkMeans(IKMeans kMeans) {
+  public void setkMeans(KMeansService kMeans) {
     this.kMeans = kMeans;
   }
 

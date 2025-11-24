@@ -5,10 +5,11 @@ import dlt.client.tangle.hornet.model.transactions.reputation.Evaluation;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
-import python.to.java.services.IKMeans;
+import kmeans.services.KMeansService;
 import reputation.node.models.SourceCredibility;
 import reputation.node.reputation.credibility.INodeCredibility;
 import reputation.node.reputation.credibility.NodeCredibility;
+
 
 /**
  * Responsável por calcular a reputação de uma coisa, com o uso do algoritmo
@@ -19,21 +20,21 @@ import reputation.node.reputation.credibility.NodeCredibility;
  */
 public class ReputationUsingKMeans implements IReputation {
 
-  private final IKMeans kMeans;
+  private final KMeansService kMeans;
   private final INodeCredibility nodeCredibility;
   private final String sourceId;
 
   /**
    * Método construtor
    *
-   * @param kMeans IKMeans - Referência ao bundle responsável pela execução do
+   * @param kMeans KMeansService - Referência ao bundle responsável pela execução do
    * algoritmo KMeans.
    * @param nodeCredibility NodeCredibility - Objeto responsável por lidar com
    * a credibilidade dos nós.
    * @param sourceId String - ID do nó avaliador.
    */
   public ReputationUsingKMeans(
-    IKMeans kMeans,
+    KMeansService kMeans,
     NodeCredibility nodeCredibility,
     String sourceId
   ) {

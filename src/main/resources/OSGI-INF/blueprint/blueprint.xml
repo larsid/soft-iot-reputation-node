@@ -14,7 +14,7 @@
     <reference id="ledgerWriterService"
         interface="dlt.client.tangle.hornet.services.ILedgerWriter" />
     <reference id="kMeansService"
-        interface="python.to.java.services.IKMeans" />
+        interface="kmeans.services.KMeansService" />
     <reference id="csvWriterService"
         interface="write.csv.services.CsvWriterService" />
 

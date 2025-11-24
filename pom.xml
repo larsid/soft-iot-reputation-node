@@ -78,7 +78,7 @@
         </dependency>
         <dependency>
             <groupId>br.uefs.larsid.iot.soft</groupId>
-            <artifactId>soft-iot-python-to-java</artifactId>
+            <artifactId>soft-iot-kmeans</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
